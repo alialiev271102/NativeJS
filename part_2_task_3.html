@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ol id="todo-list">
+
+</ol>
+
+<script>
+    const tasks = ['Buy lemonade', 'Make toasts', 'Repair car', 'Play games', 'Pet a cat'];
+    const ol = document.getElementById("todo-list");
+    for (let i = 0; i < tasks.length; i++) {
+        const li = document.createElement("li");
+        li.textContent = tasks[i];
+        ol.append(li)
+    }
+</script>
+</body>
+</html>
