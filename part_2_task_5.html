@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="cart-items">
+    <div class="item">Milk 1 l.<span class="qty">x 2</span></div>
+    <div class="item">Cola 1.5 l. <span class="qty">x 1</span></div>
+    <div class="item">Bread <span class="qty">x 2</span></div>
+    <div class="item">Cheese <span class="qty">x 1</span></div>
+    <div class="item">Chocolate bar <span class="qty">x 3</span></div>
+</div>
+
+    <script>
+        const div = document.getElementById("cart-items");
+        const newItem = document.createElement("div");
+        newItem.innerHTML = 'Canned Fish <span class="qty">x 4</span>';
+        div.replaceChild(newItem, div.lastElementChild);
+        for (let item of document.getElementsByClassName('item')) {
+            if (item.textContent === "Cola 1.5 l. x 1") {
+                item.remove();
+            }
+        }
+    </script>
+</body>
+</html>
