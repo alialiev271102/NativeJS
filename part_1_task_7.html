@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const monthName = function(dt){
+            const list = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+            return list[dt.getMonth()];
+        };
+        console.log(monthName(new Date("10/11/2009")));
+        console.log(monthName(new Date("11/13/2014")));
+    </script>
+</body>
+</html>
