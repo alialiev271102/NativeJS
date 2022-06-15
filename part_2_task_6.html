@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const ul = document.createElement("ul");
+        ul.setAttribute('id', 'ul')
+        document.body.append(ul);
+        let str;
+        do {
+            str = prompt("Добавьте дело в список");
+            const li = document.createElement('li');
+            li.innerText = str
+            ul.append(li);
+        }while (str !== null);
+        ul.lastElementChild.remove();
+    </script>
+</body>
+</html>
